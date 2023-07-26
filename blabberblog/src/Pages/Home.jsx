@@ -17,7 +17,8 @@ function Home() {
       // console.log(res.data);
       const response = res.data.map(item=>({
         id:item.id,
-        thumbnail:item.url
+        thumbnail:item.thumbnailUrl,
+        coverImage:item.url
       }));
       setImages(response);
     })
@@ -64,6 +65,7 @@ function Home() {
         blogObject.userEmail=user[0].email;
         // console.log(blogObject.user)
         blogObject.body=blogs[i].body;
+        blogObject.coverImage=images[i].coverImage;
         blogObject.image=images[i].thumbnail;
         // console.log(images[i].thumbnail);
         blogObjectArray.push(blogObject);
@@ -79,7 +81,7 @@ function Home() {
           posts.length > 0 && 
           <MainPost post={posts[0]}/>
         }
-        <Blogs />
+        {posts.length>0 && <Blogs posts={posts}/>}
         <Footer />
     </div>
   )

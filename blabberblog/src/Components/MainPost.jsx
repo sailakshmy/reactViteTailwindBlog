@@ -7,7 +7,7 @@ function MainPost({post}) {
 
   return (
     <div className='grid md:grid-cols-2 grid-cols-1 mt-10 px-10 md:px-15 lg:px-32 gap-8'>
-      <img src={post.image} className='rounded-2xl object-cover w-full h-full'/>
+      <img src={post.coverImage} className='rounded-2xl object-cover w-full h-full'/>
       <div>
         {/* <h4 className='text-blue-900'>{post.user}</h4> */}
         <h2 className='text-[23px] font-bold mt-5'>{post.title}</h2>
