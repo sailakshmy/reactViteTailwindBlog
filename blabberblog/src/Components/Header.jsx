@@ -3,7 +3,7 @@ import logo from '../assets/Images/Logo.png';
 
 function Header() {
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex justify-between items-center bg-gray-900 sticky top-0'>
       <img src={logo} className='w-[100px] cursor-pointer rounded-2xl'/>
       <ul className='flex gap-4 md:gap-14'>
         <li className='hover:font-bold cursor-pointer'>Home</li>
